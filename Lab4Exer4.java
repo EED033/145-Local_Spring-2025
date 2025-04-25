@@ -1,6 +1,6 @@
 public class Lab4Exer4 {
     public static void main(String[] args) {
-        int digit = 20;
+        int digit = 126;
         System.out.println("Digit:" + digit);
         System.out.println("\n\nSum = " + sumDigits(digit));
         //works for 49
@@ -9,39 +9,31 @@ public class Lab4Exer4 {
     public static int sumDigits(int n) {
         int total;
 
-        //System.out.println("1n = " + n );
-        //System.out.println("2n  % 10 start= " + (n % 10) );
+        System.out.println("1n = " + n );
+        System.out.println("2n  % 10 start= " + (n % 10) );
         total = n % 10;
         if (n / 10 > 1){
         System.out.println("\nSum steps: ");
         System.out.print("total = " + total );}
 
         if (n / 10 > 1) {
-            while ( n > 1) {
+            //while ( n > 1) {
                 n = n / 10;
-                //System.out.println("3n = " + n );
+                System.out.println("3n = " + n );
                 //n = n % 10;
                 total = total + (n % 10);
 
-                //System.out.println(", 4n = " + n );
+                System.out.println(", 4n = " + n );
                 //total = total + n;
                 System.out.print(", then total = " + total );
 
-            }
+            //}
             sumDigits(n);
-/*             total = n % 10;
-            System.out.println("5n % 10 = " + n );
-
-            total += n / 10;
-            System.out.println("6n / 10 = " + n + ", " + total );
-
-            System.out.println("C else total = " + total ); */
 
             return total;
         }
         else {
             return n; //or 0?
-
 
         }
 
