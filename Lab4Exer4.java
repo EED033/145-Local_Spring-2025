@@ -1,27 +1,47 @@
 public class Lab4Exer4 {
     public static void main(String[] args) {
-
-        System.out.println("Sum:" + sumDigits(126));
+        int digit = 20;
+        System.out.println("Digit:" + digit);
+        System.out.println("\n\nSum = " + sumDigits(digit));
         //works for 49
     }
 
     public static int sumDigits(int n) {
-        System.out.println("n = " + n );
-        System.out.println("n  % 10 start= " + (n % 10) );
         int total;
-        total = n % 10;
-        System.out.println(" pre total = " + total );
 
-        if ((n / 10) < 0.1) {
-            return n; //or 0?
-        }
-        else {
-            total = n % 10;
+        //System.out.println("1n = " + n );
+        //System.out.println("2n  % 10 start= " + (n % 10) );
+        total = n % 10;
+        if (n / 10 > 1){
+        System.out.println("\nSum steps: ");
+        System.out.print("total = " + total );}
+
+        if (n / 10 > 1) {
+            while ( n > 1) {
+                n = n / 10;
+                //System.out.println("3n = " + n );
+                //n = n % 10;
+                total = total + (n % 10);
+
+                //System.out.println(", 4n = " + n );
+                //total = total + n;
+                System.out.print(", then total = " + total );
+
+            }
+            sumDigits(n);
+/*             total = n % 10;
+            System.out.println("5n % 10 = " + n );
+
             total += n / 10;
-            System.out.println("n % 10 = " + n );
-            System.out.println("else total = " + total );
+            System.out.println("6n / 10 = " + n + ", " + total );
+
+            System.out.println("C else total = " + total ); */
 
             return total;
+        }
+        else {
+            return n; //or 0?
+
 
         }
 
